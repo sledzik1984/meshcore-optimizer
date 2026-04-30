@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  meshcore-optimizer:
+    image: ghcr.io/sledzik1984/meshcore-optimizer:latest
+    container_name: meshcore-optimizer
+    restart: unless-stopped
+    ports:
+      - "8013:8080"
+    volumes:
+      # Map config file
+      - /opt/meshcore-optimizer/config.json:/app/config.json
+      # Map topology
+      - /opt/meshcore-optimizer/topology.json:/app/topology.json
+      # Map passwords file
+      - /opt/meshcore-optimizer/passwords.json:/app/passwords.json
+    # Optional - companion connection
+    # devices:
+    #   - "/dev/ttyUSB0:/dev/ttyUSB0"
