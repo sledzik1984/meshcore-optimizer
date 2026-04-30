@@ -6,7 +6,7 @@ services:
     container_name: meshcore-optimizer
     restart: unless-stopped
     ports:
-      - "8013:8080"
+      - "8080:8080"
     volumes:
       # Map config file
       - /opt/meshcore-optimizer/config.json:/app/config.json
