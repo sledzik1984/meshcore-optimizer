@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   meshcore-optimizer:
-    image: ghcr.io/sledzik1984/meshcore-optimizer:latest
+    image: ghcr.io/stachuman/meshcore-optimizer:latest
     container_name: meshcore-optimizer
     restart: unless-stopped
     ports:
